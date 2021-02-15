@@ -18,14 +18,21 @@ const EmployeeCard = props => {
                     <h2 > Name: {employee.name} </h2>
                     <p> Gender: {employee.gender}</p>
                     <p> Number of Reports: {employee.reports.length}</p>
-                    <p> Age {employee.age}</p>
-                    <Button
+                    <p> Age: {employee.age}</p>
+                    {/* <Button
                         classname="delete-button"
                         onClick={() => {
                         {this.showReports(employee)};
                         }}
                         > 
                         Show Reports
+                    </Button> */}
+                    <Button bg="success"
+                        onClick={() => {
+                        {props.selectEmployee(employee)};
+                        }}
+                        > 
+                        Select Partner
                     </Button>
                 </div>
             </Col>

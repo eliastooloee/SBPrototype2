@@ -28,11 +28,30 @@
   color: #61dafb;
 }
 
+.nav-image {
+  height: 90px;
+  width: 90px;
+  padding: 10px;
+}
+
 .employee-card {
   -webkit-box-shadow: 4px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    4px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
   box-shadow:         4px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   margin: 10px;
+}
+
+.info-display {
+  height: 100px;
+  margin: 10px;
+}
+
+.info-card {
+  height: 100px;
+  color: white;
+  background-color: green;
+  outline-color: green;
+  outline-width: 10px;
 }
 
 @keyframes App-logo-spin {
