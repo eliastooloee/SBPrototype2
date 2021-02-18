@@ -6,7 +6,7 @@ import OEView from './containers/OEView';
 // import { Route, Link, withRouter } from "react-router-dom";
 import Tree from './containers/Tree'
 import InfoDisplay from './components/InfoDisplay'
-import {employeeData} from "./data";
+import {employeeData} from "./nestedData";
 import Tabular from "./containers/Tabular";
 
 class App extends Component{

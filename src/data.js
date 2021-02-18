@@ -4,7 +4,7 @@ export const employeeData = [
     "isActive": true,
     "age": 34,
     "name": "Gustavo Canton",
-    "gender": "male",
+    "reportsTo": "male",
     "company": "Starbucks",
     "phone": "+1 (967) 428-3874",
     "hired": "2016-03-24T04:32:08 +07:00",

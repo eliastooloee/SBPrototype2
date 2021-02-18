@@ -1,5 +1,5 @@
 import react from 'react'
-import {Table, thead, th, tr} from "react-bootstrap"
+import {Table, thead, th, tr, Button} from "react-bootstrap"
 const Tabular = (props) => {
     
     function ListEmployees() {
@@ -13,10 +13,12 @@ const Tabular = (props) => {
         //     {employee.name}
         //   </tbody>
 
-        <tr key={employee.id}>
+      <tr key={employee.id}>
+        {/* <Button> </Button> */}
         <td>{employee.name}</td>
-        <td>{employee.gender}</td>
+        <td>{employee.reports.length}</td>
         <td>{employee.age}</td>
+
       </tr>
           )
         }): null
@@ -26,8 +28,9 @@ const Tabular = (props) => {
           <Table>
             <thead>
                 <tr>
+                    {/* <th className = "pointless-select">Selected</th> */}
                     <th>Name</th>
-                    <th>Gender</th>
+                    <th>Direct Reports</th>
                     <th>Age</th>
                 </tr>
             </thead>

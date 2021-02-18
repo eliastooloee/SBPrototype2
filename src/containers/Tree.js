@@ -23,12 +23,21 @@ export default class Tree extends Component {
 //     };
 //   }
 
+  // this.state = {
+  //   treeData: [
+  //       {title: 'Starbucks Team', children: [
+  //           { title: 'Gustavo Canton', children: [{ title: 'Babette Siebold' }, {title: 'Tomas'}] },
+  //           { title: 'Dinesh Matta', children: [{ title: 'Elias Tooloee' }, { title: 'Sharmila Muthu'}] },
+  //           { title: this.props.selectedEmployee.name, children: this.props.selectedEmployee.reports.names}
+  //       ]}
+  //   ],
+  // };
   this.state = {
     treeData: [
-        {title: 'Starbucks Team', children: [
-            { title: 'Gustavo Canton', children: [{ title: 'Babette Siebold' }, {title: 'Tomas'}] },
-            { title: 'Dinesh Matta', children: [{ title: 'Elias Tooloee' }, { title: 'Sharmila Muthu'}] },
-            { title: this.props.selectedEmployee.name, children: this.props.selectedEmployee.reports.names}
+        {title: 'Elpida Ormanidou', expanded: true, children: [
+            { title: 'Gustavo Canton', children: [{ title: 'Babette Siebold', children: [{title:'Elyse Kadokura'}, {title:'Pan Chen'}, {title:'Tyler Norrish'}]}, {title: 'Tomas Gartner', children: [{title:'Cameron Bartok'}, {title:'Kyle Mana'}, {title:'Phi Hoang'}, {title:'Melissa Bain'}, {title:'Kyle Chezik'}]}, {title: 'Anuja Jain'}, {title: 'Matt Thomas'}, {title: 'Jason Salazer', children: [{title: 'Esmaeel Moradi'}, {title: 'Wayne Chen'}]}] },
+            { title: 'Gregory Baumgardner', children: [{ title: 'Ed Daroza' }, { title: 'Chris Dorr'}] },
+            // { title: this.props.selectedEmployee.name, children: this.props.selectedEmployee.reports.names}
         ]}
     ],
   };
@@ -43,6 +52,7 @@ export default class Tree extends Component {
         <SortableTree
           treeData={this.state.treeData}
           onChange={treeData => this.setState({ treeData })}
+          
         />
       </div>
     );

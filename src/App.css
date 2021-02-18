@@ -46,6 +46,11 @@
   margin: 10px;
 }
 
+.pointless-select {
+  max-width: 30px;
+  margin: 10px;
+}
+
 .info-card {
   height: 100px;
   color: white;
