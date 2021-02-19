@@ -1,4 +1,4 @@
-export const employeeData = [
+export const nestedEmployeeData = [
     {
       "employeeID": 0,
       "isActive": true,

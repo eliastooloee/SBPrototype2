@@ -3,11 +3,13 @@ import { Component} from 'react';
 import { Navbar, NavItem, NavDropdown, DropdownItem, Nav, Form, FormControl, Button, Image } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import OEView from './containers/OEView';
-// import { Route, Link, withRouter } from "react-router-dom";
 import Tree from './containers/Tree'
 import InfoDisplay from './components/InfoDisplay'
-import {employeeData} from "./nestedData";
+import {employeeData} from "./partnerData";
+import {nestedEmployeeData} from "./nestedData";
 import Tabular from "./containers/Tabular";
+import ManagersView from './containers/ManagersView';
+
 
 class App extends Component{
 
@@ -16,16 +18,19 @@ class App extends Component{
 
   this.state = {
     employees: employeeData,
+    nestedEmployees: nestedEmployeeData,
     user: {},
     selectedEmployee: {
       id: null,
       name: "No Partner Selected",
+      numberOfReports: 0,
       reports: [] 
     },
     view: ''
   }
 
   this.setManagerListView = this.setManagerListView.bind(this);
+  this.setManagerListView2 = this.setManagerListView2.bind(this);
   this.setTreeView = this.setTreeView.bind(this);
   this.setTabularView = this.setTabularView.bind(this);
 }
@@ -42,6 +47,12 @@ class App extends Component{
   setManagerListView(){
     this.setState(
       {view: "managers"}
+    )
+  }
+
+  setManagerListView2(){
+    this.setState(
+      {view: "manager-list"}
     )
   }
 
@@ -62,6 +73,7 @@ class App extends Component{
       selectedEmployee:{
         id: employee.employeeID,
         name: employee.name,
+        numberOfReports: employee.numberOfReports,
         reports: employee.reports
       }
     })
@@ -73,12 +85,14 @@ class App extends Component{
     let view;
 
     if(this.state.view=="tree"){
-      view = <Tree employees = {this.state.employees} selectedEmployee = {this.state.selectedEmployee}/>
+      view = <Tree employees = {this.state.employees} nestedEmployees = {this.state.nestedEmployees} selectedEmployee = {this.state.selectedEmployee}/>
     }else if(this.state.view=="tabular"){
       view = <Tabular employees = {this.state.employees} selectedEmployee = {this.state.selectedEmployee}/>
+    }else if(this.state.view=="manager-list"){
+      view = <ManagersView employees = {this.state.nestedEmployees} selectedEmployee = {this.state.selectedEmployee}/>
     }
     else {
-      view = <OEView employees = {this.state.employees} selectEmployee={this.selectEmployee}/>
+      view = <OEView employees = {this.state.employees}  selectEmployee={this.selectEmployee}/>
     }
     return(
       <div>
@@ -94,9 +108,10 @@ class App extends Component{
               <NavDropdown title="Select View" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1" onSelect={this.setTabularView}>Tabular View</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2" onSelect={this.setTreeView}>Tree View</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3" onSelect={this.setManagerListView}>Manager List</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3" onSelect={this.setManagerListView}>Partner List</NavDropdown.Item>
+                {/* <NavDropdown.Item href="#action/3.4" onSelect={this.setManagerListView2}>Manager List</NavDropdown.Item> */}
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.5">Separated link</NavDropdown.Item>
               </NavDropdown>
              
             </Nav>

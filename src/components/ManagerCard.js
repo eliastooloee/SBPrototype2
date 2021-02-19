@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Container, Button } from 'react-bootstrap';
 
-const EmployeeCard = props => {
+const ManagerCard = props => {
     const { employee } = props;
     
     function showReports(){
@@ -19,14 +19,14 @@ const EmployeeCard = props => {
                     <p> Gender: {employee.gender}</p>
                     <p> Number of Reports: {employee.numberOfReports}</p>
                     <p> Age: {employee.age}</p>
-                    {/* <Button
+                    <Button
                         classname="delete-button"
                         onClick={() => {
                         {this.showReports(employee)};
                         }}
                         > 
                         Show Reports
-                    </Button> */}
+                    </Button>
                     <Button bg="success"
                         onClick={() => {
                         {props.selectEmployee(employee)};
@@ -41,4 +41,4 @@ const EmployeeCard = props => {
     </div>
     )
 }
-export default EmployeeCard;
+export default ManagerCard;

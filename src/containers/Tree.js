@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import SortableTree from 'react-sortable-tree';
+import {getTreeFromFlatData} from 'react-sortable-tree';
+import {employeeData} from "../data";
 import 'react-sortable-tree/style.css';
 
 export default class Tree extends Component {
   constructor(props) {
     super(props);
+
+    const treeData = getTreeFromFlatData(employeeData)
 
     // const treeData = this.props.employees.map(employee => ({ title: employee.name, children:employee.reports }));
     // // const childData = this.props.employees.reports.map(report => ({title: report.name}));
@@ -13,6 +17,8 @@ export default class Tree extends Component {
     // this.state = {
     //     treeData: treeData
     // }
+
+
 
 
 //     this.state = {
@@ -42,6 +48,7 @@ export default class Tree extends Component {
     ],
   };
 }
+
 
 
 

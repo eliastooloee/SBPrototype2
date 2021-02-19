@@ -13,7 +13,7 @@ const InfoDisplay = props => {
                             <Card.Header>Direct Number of Reports</Card.Header> 
                             <Card.Body>
                                 {/* {this.props.selectedEmployee.reports.length} */}
-                                <p> {props.selectedEmployee.reports.length} </p>
+                                <p> {props.selectedEmployee.numberOfReports} </p>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -53,7 +53,7 @@ const InfoDisplay = props => {
                         <Card className = "info-card" bg='success'> 
                             <Card.Header>Total Anomalies</Card.Header>
                             <Card.Body>
-                                4
+                                0
                             </Card.Body>
                         </Card>
                     </Col>

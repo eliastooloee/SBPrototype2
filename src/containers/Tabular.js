@@ -16,7 +16,7 @@ const Tabular = (props) => {
       <tr key={employee.id}>
         {/* <Button> </Button> */}
         <td>{employee.name}</td>
-        <td>{employee.reports.length}</td>
+        <td>{employee.numberOfReports}</td>
         <td>{employee.age}</td>
 
       </tr>
