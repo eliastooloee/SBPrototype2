@@ -8,10 +8,12 @@
     "node": "12.16.1"
   },
   "dependencies": {
+    "@dabeng/react-orgchart": "^1.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.6.0",
+    "flat": "^5.0.2",
     "react": "^16.0.2",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^16.0.2",

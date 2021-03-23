@@ -1,15 +1,22 @@
 import './App.css';
 import { Component} from 'react';
+
+//Bootstrap styling component imports
 import { Navbar, NavItem, NavDropdown, DropdownItem, Nav, Form, FormControl, Button, Image } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+//Component imports
 import OEView from './containers/OEView';
 import Tree from './containers/Tree'
 import InfoDisplay from './components/InfoDisplay'
-import {employeeData} from "./partnerData";
-import {nestedEmployeeData} from "./nestedData";
 import Tabular from "./containers/Tabular";
 import ManagersView from './containers/ManagersView';
+import OrgChart from './containers/OrgChart'
 
+//Data imports for testing
+import {employeeData} from "./partnerData";
+import {nestedEmployeeData} from "./nestedData";
+import {nestedPartners} from "./nestedPartners";
 
 class App extends Component{
 
@@ -19,6 +26,7 @@ class App extends Component{
   this.state = {
     employees: employeeData,
     nestedEmployees: nestedEmployeeData,
+    managers: employeeData.filter(employee => employee.numberOfReports > 0),
     user: {},
     selectedEmployee: {
       id: null,
@@ -33,11 +41,12 @@ class App extends Component{
   this.setManagerListView2 = this.setManagerListView2.bind(this);
   this.setTreeView = this.setTreeView.bind(this);
   this.setTabularView = this.setTabularView.bind(this);
+  this.setOrgChartView = this.setOrgChartView.bind(this);
 }
 
   componentDidMount() {
-
     this.checkUp();
+    // this.flattenNestedEmployees();
   }
 
   checkUp = () =>{
@@ -68,6 +77,12 @@ class App extends Component{
     )
   }
 
+  setOrgChartView(){
+    this.setState(
+      {view: "org-chart"}
+    )
+  }
+
   selectEmployee = (employee) => {
     this.setState({
       selectedEmployee:{
@@ -78,6 +93,15 @@ class App extends Component{
       }
     })
   }
+
+  flattenNestedEmployees = (nestedPartners) => {
+      let flatten = require('flat')
+
+      // flatten(nestedPartners)
+      console.log(flatten(nestedPartners))
+  }
+
+  
 
   
   render() {
@@ -90,9 +114,11 @@ class App extends Component{
       view = <Tabular employees = {this.state.employees} selectedEmployee = {this.state.selectedEmployee}/>
     }else if(this.state.view=="manager-list"){
       view = <ManagersView employees = {this.state.nestedEmployees} selectedEmployee = {this.state.selectedEmployee}/>
+    }else if(this.state.view=="org-chart"){
+      view = <OrgChart employees = {this.state.nestedEmployees} selectedEmployee = {this.state.selectedEmployee}/>
     }
     else {
-      view = <OEView employees = {this.state.employees}  selectEmployee={this.selectEmployee}/>
+      view = <OEView employees = {this.state.employees} managers={this.state.managers}  selectEmployee={this.selectEmployee}/>
     }
     return(
       <div>
@@ -106,9 +132,10 @@ class App extends Component{
               {/* <Nav.Link href="#home">Home</Nav.Link> */}
               {/* <Nav.Link href="#link">Link</Nav.Link> */}
               <NavDropdown title="Select View" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1" onSelect={this.setTabularView}>Tabular View</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1" onSelect={this.setTabularView}>Tabular View (all partners)</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2" onSelect={this.setTreeView}>Tree View</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3" onSelect={this.setManagerListView}>Partner List</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3" onSelect={this.setManagerListView}>Manager List</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" onSelect={this.setOrgChartView}>Org Chart</NavDropdown.Item>
                 {/* <NavDropdown.Item href="#action/3.4" onSelect={this.setManagerListView2}>Manager List</NavDropdown.Item> */}
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.5">Separated link</NavDropdown.Item>
