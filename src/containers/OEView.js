@@ -9,7 +9,7 @@ const OEView = (props) => {
         return props.managers.length > 0 ? props.managers.map(manager => {
           return (
             <div key={manager.id} >
-              <EmployeeCard {...props} employee={manager} key={manager.employeeId} selectEmployee={props.selectEmployee}  />
+              <EmployeeCard {...props} employee={manager} key={manager.employeeId} selectEmployee={props.selectEmployee} showReports={props.showReports}  />
             </div>
           )
         }): null

@@ -25,7 +25,7 @@ class App extends Component{
 
   this.state = {
     employees: employeeData,
-    nestedEmployees: nestedEmployeeData,
+    nestedEmployees: nestedPartners,
     managers: employeeData.filter(employee => employee.numberOfReports > 0),
     user: {},
     selectedEmployee: {
@@ -52,6 +52,12 @@ class App extends Component{
   checkUp = () =>{
     console.log(this.state)
   }
+
+  // assignReportsToManagers = () => {
+  //   this.state.employees.map(employee => {
+  //     employee.runner
+  //   })
+  // }
 
   setManagerListView(){
     this.setState(
@@ -94,11 +100,8 @@ class App extends Component{
     })
   }
 
-  flattenNestedEmployees = (nestedPartners) => {
-      let flatten = require('flat')
+  showReports = (employee) => {
 
-      // flatten(nestedPartners)
-      console.log(flatten(nestedPartners))
   }
 
   
@@ -118,7 +121,7 @@ class App extends Component{
       view = <OrgChart employees = {this.state.nestedEmployees} selectedEmployee = {this.state.selectedEmployee}/>
     }
     else {
-      view = <OEView employees = {this.state.employees} managers={this.state.managers}  selectEmployee={this.selectEmployee}/>
+      view = <OEView employees = {this.state.employees} managers={this.state.managers}  selectEmployee={this.selectEmployee} showReports={this.showReports}/>
     }
     return(
       <div>

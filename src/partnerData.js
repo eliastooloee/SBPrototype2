@@ -1,6 +1,19 @@
 export const employeeData = [
-    
-
+            
+  {
+    id: 2,
+    "isActive": true,
+    age: 34,
+    name: "Elpida Ormanidou",
+    title: "female",
+    managerId: 2,
+    numberOfReports: 2,
+    "hired": "2016-03-24T04:32:08 +07:00",
+    children: [
+      
+      
+    ]
+  },
             {
                 id: 0,
                 "isActive": true,
