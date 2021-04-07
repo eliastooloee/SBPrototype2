@@ -1,17 +1,15 @@
 import React from "react";
 import { Row, Col, Container, Button } from 'react-bootstrap';
+import ReportsModal from './ReportsModal';
 
 const EmployeeCard = props => {
     const { employee } = props;
     
-    function showReports(){
-        return (employee.reports
-            )
-    }
+
 
     return(
         <div>
-        <Container>
+        <Container fluid>
             <Row>
             <Col>
                 <div className="employee-card">
@@ -19,21 +17,24 @@ const EmployeeCard = props => {
                     <p> Gender: {employee.gender}</p>
                     <p> Number of Reports: {employee.numberOfReports}</p>
                     <p> Age: {employee.age}</p>
-                    {/* <Button
-                        classname="delete-button"
+                    <Button
+                        variant="success"
+                        className="delete-button"
                         onClick={() => {
-                        {this.showReports(employee)};
+                        {props.setOrgChartSource(employee)};
                         }}
                         > 
-                        Show Reports
-                    </Button> */}
-                    <Button bg="success"
+                        View Org Chart 
+                    </Button>
+                  
+                    <Button variant="success"
                         onClick={() => {
                         {props.selectEmployee(employee)};
                         }}
                         > 
                         Select Partner
                     </Button>
+
                 </div>
             </Col>
             </Row>

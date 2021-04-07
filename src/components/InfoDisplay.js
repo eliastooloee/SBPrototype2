@@ -1,8 +1,20 @@
-import react from 'react';
+import react, {useState, useEffect} from 'react';
 import {Container, Row, Col, Card} from 'react-bootstrap';
 
+
+function useForceUpdate(){
+    const [value, setValue] = useState(0); // integer state
+    return () => setValue(value => value + 1); // update the state to force render
+}
+
 const InfoDisplay = props => {
-    const { employee, selectedEmployee } = props;
+  
+    const forceUpdate = useForceUpdate();
+
+    useEffect(()=>{
+        forceUpdate()
+    },[props.orgChartSource.children.length]);
+
     return(
         <div>
             <Container>
@@ -13,7 +25,7 @@ const InfoDisplay = props => {
                             <Card.Header>Direct Number of Reports</Card.Header> 
                             <Card.Body>
                                 {/* {this.props.selectedEmployee.reports.length} */}
-                                <p> {props.selectedEmployee.numberOfReports} </p>
+                                <p> {props.orgChartSource.children.length} </p>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -21,7 +33,7 @@ const InfoDisplay = props => {
                         <Card className = "info-card" bg='success'> 
                             <Card.Header>No.Employees/No.Managers</Card.Header>
                             <Card.Body>
-                                2
+                            <p> 1/{props.orgChartSource.children.length} </p>
                             </Card.Body>
                         </Card>
                     </Col>

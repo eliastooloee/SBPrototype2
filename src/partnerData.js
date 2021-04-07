@@ -1,12 +1,12 @@
 export const employeeData = [
             
   {
-    id: 2,
+    id: 'n2',
     "isActive": true,
     age: 34,
     name: "Elpida Ormanidou",
     title: "female",
-    managerId: 2,
+    managerId: 'n',
     numberOfReports: 2,
     "hired": "2016-03-24T04:32:08 +07:00",
     children: [
@@ -15,12 +15,12 @@ export const employeeData = [
     ]
   },
             {
-                id: 0,
+                id: 'n0',
                 "isActive": true,
                 age: 34,
                 name: "Gustavo Canton",
                 title: "male",
-                managerId: 2,
+                managerId: 'n2',
                 numberOfReports: 5,
                 "hired": "2016-03-24T04:32:08 +07:00",
                 children: [
@@ -29,12 +29,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 1,
+                id: 'n1',
                 "isActive": true,
                 age: 38,
                 name: "Babette Siebold",
                 title: "female",
-                managerId: 0,
+                managerId: 'n0',
                 numberOfReports: 3,
                 "hired": "2016-08-08T12:46:19 +07:00",
                 children: [
@@ -42,12 +42,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 10,
+                id: 'n10',
                 "isActive": true,
                 age: 37,
                 name: "Elyse Kadokura",
                 title: "female",
-                managerId: 1,
+                managerId: 'n1',
                 numberOfReports: 0,
                 "hired": "2015-08-15T04:44:49 +07:00",
                 children: [
@@ -55,12 +55,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 11,
+                id: 'n11',
                 "isActive": false,
                 age: 29,
                 name: "Pan Chen",
                 title: "male",
-                managerId: 1,
+                managerId: 'n1',
                 numberOfReports: 0,
                 "hired": "2015-02-16T12:11:11 +08:00",
                 children: [
@@ -68,12 +68,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 12,
+                id: 'n12',
                 "isActive": false,
                 age: 32,
                 name: "Tyler Norrish",
                 title: "male",
-                managerId: 1,
+                managerId: 'n1',
                 numberOfReports: 0,
                 "hired": "2019-09-17T06:29:16 +07:00",
                 children: [
@@ -81,12 +81,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 3,
+                id: 'n3',
                 "isActive": true,
                 age: 26,
                 name: "Tomas Gartner",
                 title: "male",
-                managerId: 0,
+                managerId: 'n0',
                 numberOfReports: 5,
                 "hired": "2015-01-22T08:26:21 +08:00",
                 children: [
@@ -94,12 +94,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 13,
+                id: 'n13',
                 "isActive": false,
                 age: 38,
                 name: "Cameron Bartok",
                 title: "male",
-                managerId: 3,
+                managerId: 'n3',
                 numberOfReports: 0,
                 "hired": "2015-04-23T03:48:55 +07:00",
                 children: [
@@ -107,12 +107,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 14,
+                id: 'n14',
                 "isActive": false,
                 age: 27,
                 name: "Kyle Mana",
                 title: "male",
-                managerId: 3,
+                managerId: 'n3',
                 numberOfReports: 0,
                 "hired": "2020-10-14T02:28:38 +07:00",
                 children: [
@@ -120,12 +120,12 @@ export const employeeData = [
                 ]
               },
               {
-                  id: 15,
+                  id: 'n15',
                   "isActive": false,
                   age: 27,
                   name: "Phi Hoang",
                   title: "male",
-                  managerId: 3,
+                  managerId: 'n3',
                   numberOfReports: 0,
                   "hired": "2020-10-14T02:28:38 +07:00",
                   children: [
@@ -133,12 +133,12 @@ export const employeeData = [
                   ]
                 },
                 {
-                  id: 16,
+                  id: 'n16',
                   "isActive": false,
                   age: 27,
                   name: "Melissa Bain",
                   title: "female",
-                  managerId: 3,
+                  managerId: 'n3',
                   numberOfReports: 0,
                   "hired": "2020-10-14T02:28:38 +07:00",
                   children: [
@@ -146,12 +146,12 @@ export const employeeData = [
                   ]
                 },
                 {
-                  id: 17,
+                  id: 'n17',
                   "isActive": false,
                   age: 27,
                   name: "Kyle Chezik",
                   title: "male",
-                  managerId: 3,
+                  managerId: 'n3',
                   numberOfReports: 0,
                   "hired": "2020-10-14T02:28:38 +07:00",
                   children: [
@@ -159,12 +159,12 @@ export const employeeData = [
                   ]
                 },
               {
-                id: 4,
+                id: 'n4',
                 "isActive": true,
                 age: 28,
                 name: "Anjua Jain",
                 title: "female",
-                managerId: 0,
+                managerId: 'n0',
                 numberOfReports: 0,
                 "hired": "2018-04-01T01:21:58 +07:00",
                 children: [
@@ -172,12 +172,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 5,
+                id: 'n5',
                 "isActive": false,
                 age: 39,
                 name: "Matt Thomas",
                 title: "male",
-                managerId: 0,
+                managerId: 'n0',
                 numberOfReports: 0,
                 "hired": "2014-11-11T11:20:56 +08:00",
                 children: [
@@ -185,12 +185,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 6,
+                id: 'n6',
                 "isActive": false,
                 age: 31,
                 name: "Jason Salazer",
                 title: "male",
-                managerId: 0,
+                managerId: 'n0',
                 numberOfReports: 2,
                 "hired": "2015-10-21T10:13:59 +07:00",
                 children: [
@@ -198,12 +198,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 18,
+                id: 'n18',
                 "isActive": false,
                 age: 27,
                 name: "Wayne Chen",
                 title: "male",
-                managerId: 6,
+                managerId: 'n6',
                 numberOfReports: 0,
                 "hired": "2020-10-14T02:28:38 +07:00",
                 children: [
@@ -211,12 +211,12 @@ export const employeeData = [
                 ]
               },
               {
-                id: 19,
+                id: 'n19',
                 "isActive": false,
                 age: 27,
                 name: "Esmaeel Moradi",
                 title: "male",
-                managerId: 6,
+                managerId: 'n6',
                 numberOfReports: 0,
                 "hired": "2020-10-14T02:28:38 +07:00",
                 children: [
@@ -226,12 +226,12 @@ export const employeeData = [
               
               
               {
-                id: 7,
+                id: 'n7',
                 "isActive": false,
                 age: 40,
                 name: "Gregory Baumgardner",
                 title: "male",
-                managerId: 2,
+                managerId: 'n2',
                 numberOfReports: 2,
                 "hired": "2017-06-17T02:44:44 +07:00",
                 children: [
@@ -239,12 +239,12 @@ export const employeeData = [
                 ]
             },
             {
-              id: 8,
+              id: 'n8',
               "isActive": false,
               age:39,
               name: "Ed Daroza",
               title: "male",
-              managerId: 7,
+              managerId: 'n7',
               numberOfReports: 0,
               "hired": "2018-02-12T02:39:43 +08:00",
               children: [
@@ -252,12 +252,12 @@ export const employeeData = [
               ]
             },
             {
-              id: 9,
+              id: 'n9',
               "isActive": true,
               age: 22,
               name: "Chris Dorr",
               title: "male",
-              managerId: 7,
+              managerId: 'n7',
               numberOfReports: 0,
               "hired": "2018-03-01T03:27:39 +08:00",
               children: [

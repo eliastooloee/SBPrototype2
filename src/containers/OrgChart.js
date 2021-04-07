@@ -2,8 +2,10 @@ import React from "react";
 import OrganizationChart from "@dabeng/react-orgchart";
 import OrgNode from "../components/OrgNode"
 import {nestedPartners} from "../nestedPartners";
+import { MapInteractionCSS } from 'react-map-interaction';
 
-const OrgChart = () => {
+const OrgChart = (props) => {
+    const { employees, orgChartSource } = props;
 //   const ds = {
 //     id: "n1",
 //     name: "Lao Lao",
@@ -296,14 +298,18 @@ const OrgChart = () => {
     ]
   };
 
-  return <OrganizationChart 
-  chartClass="myChart"
-  datasource={ds} 
-  draggable={true} 
-  pan={true} 
-  zoom={true} zoominLimit={2} zoomoutLimit={0.6}
-  collapsible={true} 
-  NodeTemplate={OrgNode} />;
+  return <div>
+  {/* <MapInteractionCSS> */}
+        <OrganizationChart 
+        chartClass="myChart"
+        datasource={orgChartSource} 
+        draggable={true} 
+        // pan={true} 
+        // zoom={true} zoominLimit={2} zoomoutLimit={0.6}
+        collapsible={true} 
+        NodeTemplate={OrgNode} />
+    {/* </MapInteractionCSS> */}
+  </div>;
 };
 
 export default OrgChart;
