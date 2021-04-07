@@ -31,8 +31,8 @@ export default class CleanSortedTable extends React.Component {
         <BootstrapTable ref='table' data={ this.props.employees }>
             <TableHeaderColumn dataField='id' isKey dataSort>Partner ID</TableHeaderColumn>
             <TableHeaderColumn dataField='name' dataSort> Name</TableHeaderColumn>
-            <TableHeaderColumn dataField='age' dataSort>Age</TableHeaderColumn>
-            <TableHeaderColumn dataField='numberOfReports' dataSort>Number of Reports</TableHeaderColumn>
+            <TableHeaderColumn dataField='title' dataSort>Title</TableHeaderColumn>
+            <TableHeaderColumn dataField='numberOfReports' dataSort >Number of Reports</TableHeaderColumn>
         </BootstrapTable>
       </div>
     );

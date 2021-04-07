@@ -13,8 +13,8 @@ const EmployeeCard = props => {
             <Row>
             <Col>
                 <div className="employee-card">
-                    <h2 > Name: {employee.name} </h2>
-                    <p> Gender: {employee.gender}</p>
+                    <h2 > {employee.name} </h2>
+                    <h3> {employee.title}</h3>
                     <p> Number of Reports: {employee.numberOfReports}</p>
                     <p> Age: {employee.age}</p>
                     <Button

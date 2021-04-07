@@ -94,13 +94,19 @@
 
 
 /* OrgChart Styles*/
-.orgchart.myChart {
+/* .orgchart.myChart {
   background-image: linear-gradient(
       90deg,
-      rgba(33, 90, 136, 0.15) 10%,
+      rgba(11, 172, 65, 0.15) 10%,
       rgba(0, 0, 0, 0) 10%
     ),
     linear-gradient(rgba(33, 90, 136, 0.15) 10%, rgba(0, 0, 0, 0) 10%) !important;
+} */
+
+.orgchart.myChart {
+  background-image: none;
+  background-color: rgb(247, 244, 244);
+  /* width: fit-content; */
 }
 
 .orgchart.myChart > ul > li > ul li::before {
@@ -114,7 +120,7 @@
 
 .orgchart.myChart .oc-node .position {
   box-sizing: border-box;
-  background-color: green;
+  background-color: rgb(88, 124, 88);
   color: #fff;
   width: 130px;
   height: 65px;
@@ -123,7 +129,7 @@
 
 .orgchart.myChart .oc-node .fullname {
   box-sizing: border-box;
-  color: green;
+  color: 138, 243, 138;
   background-color: #fff;
   width: 130px;
   height: 65px;

@@ -1,6 +1,7 @@
 import React from "react";
 import OrganizationChart from "@dabeng/react-orgchart";
-import OrgNode from "../components/OrgNode"
+import OrgNode from "../components/OrgNode";
+import {Container} from 'react-bootstrap';
 import {nestedPartners} from "../nestedPartners";
 import { MapInteractionCSS } from 'react-map-interaction';
 
@@ -300,6 +301,7 @@ const OrgChart = (props) => {
 
   return <div>
   {/* <MapInteractionCSS> */}
+  {/* <Container fluid> */}
         <OrganizationChart 
         chartClass="myChart"
         datasource={orgChartSource} 
@@ -308,6 +310,7 @@ const OrgChart = (props) => {
         // zoom={true} zoominLimit={2} zoomoutLimit={0.6}
         collapsible={true} 
         NodeTemplate={OrgNode} />
+    {/* </Container> */}
     {/* </MapInteractionCSS> */}
   </div>;
 };

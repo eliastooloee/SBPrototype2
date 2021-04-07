@@ -7,17 +7,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Component imports
 import OEView from './containers/OEView';
-import Tree from './containers/Tree'
+import Tree from './containers/Tree';
 import InfoDisplay from './components/ResponsiveInfoDisplay'
 import Tabular from "./containers/Tabular";
 import ManagersView from './containers/ManagersView';
-import OrgChart from './containers/OrgChart'
-import CleanSortedTable from './containers/SortingTable'
+import OrgChart from './containers/OrgChart';
+import CleanSortedTable from './containers/SortingTable';
+import QBRView from './containers/QBRView';
 
 //Data imports for testing
 import {employeeData} from "./partnerData";
 import {nestedEmployeeData} from "./nestedData";
 import {nestedPartners} from "./nestedPartners";
+
 
 class App extends Component{
 
@@ -46,6 +48,7 @@ class App extends Component{
   this.setTabularView = this.setTabularView.bind(this);
   this.setOrgChartView = this.setOrgChartView.bind(this);
   this.setTableTestView = this.setTableTestView.bind(this);
+  this.setQBRView = this.setQBRView.bind(this);
 }
 
   componentDidMount() {
@@ -93,6 +96,12 @@ class App extends Component{
   setManagerListView2(){
     this.setState(
       {view: "manager-list"}
+    )
+  }
+
+  setQBRView(){
+    this.setState(
+      {view: "qbr"}
     )
   }
 
@@ -165,6 +174,8 @@ class App extends Component{
       view = <OrgChart employees = {this.state.nestedEmployees} selectedEmployee = {this.state.selectedEmployee} orgChartSource={this.state.orgChartSource}/>
     }else if(this.state.view=="table-test"){
       view = <CleanSortedTable employees = {this.state.employees} selectedEmployee = {this.state.selectedEmployee}/>
+    }else if(this.state.view=="qbr"){
+      view = <QBRView employees = {this.state.employees} selectedEmployee = {this.state.selectedEmployee}/>
     }
     else {
       view = <OEView employees = {this.state.employees} managers={this.state.managers}  selectEmployee={this.selectEmployee} setOrgChartSource={this.setOrgChartSource} showReports={this.showReports} showModal={this.state.showReportsModal}/>
@@ -173,7 +184,7 @@ class App extends Component{
       <div>
         <Navbar className="nav-bar" expand="lg">
           <Navbar.Brand href="#home">Starbucks
-          <Image src='./logo.png' className="nav-image" roundedCircle/>
+          <Image src='./logo192.png' className="nav-image" roundedCircle/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -181,11 +192,11 @@ class App extends Component{
               {/* <Nav.Link href="#home">Home</Nav.Link> */}
               {/* <Nav.Link href="#link">Link</Nav.Link> */}
               <NavDropdown title="Select View" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1" onSelect={this.setTabularView}>Tabular View (all partners)</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1" onSelect={this.setQBRView}>QBR View</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2" onSelect={this.setTreeView}>Tree View</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3" onSelect={this.setManagerListView}>Manager List</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.4" onSelect={this.setOrgChartView}>Org Chart</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5" onSelect={this.setTableTestView}>Sortable Table (test)</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.5" onSelect={this.setTableTestView}>Tabular View (All Partners)</NavDropdown.Item>
                 {/* <NavDropdown.Item href="#action/3.4" onSelect={this.setManagerListView2}>Manager List</NavDropdown.Item> */}
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.6">Separated link</NavDropdown.Item>
