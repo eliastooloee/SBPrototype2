@@ -1,5 +1,118 @@
 export const employeeData = [
-            
+  
+
+  
+  // {
+  //   id: 'n25',
+  //   "isActive": true,
+  //   name: "Jon Francis",
+  //   title: "CAO",
+  //   managerId: 'n',
+  //   numberOfReports: 2,
+  //   "hired": "2016-03-24T04:32:08 +07:00",
+  //   children: [
+      
+      
+  //   ]
+  // },
+  // {
+  //   id: 'n2',
+  //   "isActive": true,
+  //   name: "Elpida Ormanidou",
+  //   title: "VP, Data Science",
+  //   managerId: 'n25',
+  //   numberOfReports: 2,
+  //   "hired": "2016-03-24T04:32:08 +07:00",
+  //   children: [
+      
+      
+  //   ]
+  // },
+  // {
+  //   id: 'n26',
+  //   "isActive": true,
+  //   age: 34,
+  //   name: "Micahel Chun",
+  //   title: "Director, Applied Analytics",
+  //   managerId: 'n22',
+  //   numberOfReports: 2,
+  //   "hired": "2016-03-24T04:32:08 +07:00",
+  //   children: [
+      
+      
+  //   ]
+  // },
+  // {
+  //   id: 'n2',
+  //   "isActive": true,
+  //   age: 34,
+  //   name: "Elpida Ormanidou",
+  //   title: "VP, Data Science",
+  //   managerId: 'n',
+  //   numberOfReports: 2,
+  //   "hired": "2016-03-24T04:32:08 +07:00",
+  //   children: [
+      
+      
+  //   ]
+  // },
+  // {
+  //   id: 'n2',
+  //   "isActive": true,
+  //   age: 34,
+  //   name: "Elpida Ormanidou",
+  //   title: "VP, Data Science",
+  //   managerId: 'n',
+  //   numberOfReports: 2,
+  //   "hired": "2016-03-24T04:32:08 +07:00",
+  //   children: [
+      
+      
+  //   ]
+  // },
+  // {
+  //   id: 'n2',
+  //   "isActive": true,
+  //   age: 34,
+  //   name: "Elpida Ormanidou",
+  //   title: "VP, Data Science",
+  //   managerId: 'n',
+  //   numberOfReports: 2,
+  //   "hired": "2016-03-24T04:32:08 +07:00",
+  //   children: [
+      
+      
+  //   ]
+  // },
+  // {
+  //   id: 'n2',
+  //   "isActive": true,
+  //   age: 34,
+  //   name: "Elpida Ormanidou",
+  //   title: "VP, Data Science",
+  //   managerId: 'n',
+  //   numberOfReports: 2,
+  //   "hired": "2016-03-24T04:32:08 +07:00",
+  //   children: [
+      
+      
+  //   ]
+  // },
+  // {
+  //   id: 'n',
+  //   "isActive": true,
+  //   age: 34,
+  //   name: "Elpida Ormanidou",
+  //   title: "VP, Data Science",
+  //   managerId: 'n',
+  //   numberOfReports: 2,
+  //   "hired": "2016-03-24T04:32:08 +07:00",
+  //   children: [
+      
+      
+  //   ]
+  // },
+
   {
     id: 'n2',
     "isActive": true,

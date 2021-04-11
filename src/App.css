@@ -31,8 +31,37 @@
 /* Navbar Styles*/
 
 .nav-bar{
-  background-color: rgb(231, 231, 231);
+  background-color: #f0f0f0;
+  opacity: 80%;
+  color: #3c6e39;
+  outline-color:#3c6e39 ;
 }
+
+.nav-branding{
+  color: #3c6e39;
+  background-color: #fff;
+  font-size: large;
+}
+
+.nav-text{
+  color:#3c6e39;
+  font-size: x-large;
+}
+
+.selection-nav{
+  background-color: slategray !important;
+}
+
+.nav-button{
+  color:#f0f0f0 ;
+  font: large ;
+}
+
+.drop-down{
+  color: #ddd;
+  
+}
+
 
 .nav-image {
   height: 90px;
@@ -56,12 +85,13 @@
 /* Button Styles*/
 .delete-button {
   margin: 5px;
+ background-color :#3c6e39 !important
 }
 
 .regenerate-kpi-button{
   margin: 5px;
   position: sticky;
-  color:grey;
+  color :#3c6e39 !important
 }
 
 /* KPI Display Styles*/
@@ -70,7 +100,7 @@
   margin-bottom: 70px;
   margin-top: 1px;
   outline-style: auto;
-  outline-color: grey;
+  outline-color: #3c6e39;
   outline-width: 1px;
 }
 
@@ -85,7 +115,7 @@
 .info-card {
   height: 100px;
   color: white;
-  background-color: green;
+  background-color:#3c6e39 !important;
   outline-color: green;
   outline-width: 10px;
   margin-bottom: 10px;
@@ -105,7 +135,7 @@
 
 .orgchart.myChart {
   background-image: none;
-  background-color: rgb(247, 244, 244);
+  background-color:  #f0f0f0;
   /* width: fit-content; */
 }
 
@@ -120,7 +150,7 @@
 
 .orgchart.myChart .oc-node .position {
   box-sizing: border-box;
-  background-color: rgb(88, 124, 88);
+  background-color: #3c6e39;
   color: #fff;
   width: 130px;
   height: 65px;

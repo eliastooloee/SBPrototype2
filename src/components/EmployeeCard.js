@@ -16,9 +16,8 @@ const EmployeeCard = props => {
                     <h2 > {employee.name} </h2>
                     <h3> {employee.title}</h3>
                     <p> Number of Reports: {employee.numberOfReports}</p>
-                    <p> Age: {employee.age}</p>
+                    
                     <Button
-                        variant="success"
                         className="delete-button"
                         onClick={() => {
                         {props.setOrgChartSource(employee)};
@@ -27,7 +26,7 @@ const EmployeeCard = props => {
                         View Org Chart 
                     </Button>
                   
-                    <Button variant="success"
+                    <Button className="delete-button"
                         onClick={() => {
                         {props.selectEmployee(employee)};
                         }}

@@ -1,8 +1,9 @@
 import './App.css';
 import { Component} from 'react';
+import AI_Logo from './images/AI_Logo.png';
 
 //Bootstrap styling component imports
-import { Navbar, NavItem, NavDropdown, DropdownItem, Nav, Form, FormControl, Button, Image } from 'react-bootstrap';
+import { Navbar, NavItem, NavDropdown, DropdownItem, Nav, Form, FormControl, Button, Image, Tab } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Component imports
@@ -182,40 +183,58 @@ class App extends Component{
     }
     return(
       <div>
-        <Navbar className="nav-bar" expand="lg">
-          <Navbar.Brand href="#home">Starbucks
-          <Image src='./logo192.png' className="nav-image" roundedCircle/>
+        <Navbar className="nav-bar" expand="lg"  >
+       <text className="nav-text"> Starbucks </text>
+          <Navbar.Brand href="#home" classname="nav-branding"  >
+          <Image src={AI_Logo} className="nav-image"  rounded/> 
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              {/* <Nav.Link href="#home">Home</Nav.Link> */}
-              {/* <Nav.Link href="#link">Link</Nav.Link> */}
-              <NavDropdown title="Select View" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1" onSelect={this.setQBRView}>QBR View</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2" onSelect={this.setTreeView}>Tree View</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3" onSelect={this.setManagerListView}>Manager List</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" onSelect={this.setOrgChartView}>Org Chart</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5" onSelect={this.setTableTestView}>Tabular View (All Partners)</NavDropdown.Item>
-                {/* <NavDropdown.Item href="#action/3.4" onSelect={this.setManagerListView2}>Manager List</NavDropdown.Item> */}
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.6">Separated link</NavDropdown.Item>
-              </NavDropdown>
-             
-            </Nav>
-            <Navbar.Text className="ml-auto">
+         <text className="nav-text"> Organizational Effectiveness </text>
+            
+            {/* <Navbar.Text className="nav-text">
                 Selected Partner: {this.state.selectedEmployee.name}
-              </Navbar.Text>
-              <Navbar.Text className="ml-auto">
+              </Navbar.Text> */}
+            <Navbar.Text className="nav-text">
                        
               </Navbar.Text>
             {/* <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
               <Button variant="outline-success">Search</Button>
             </Form> */}
-          </Navbar.Collapse>
+          {/* </Navbar.Collapse> */}
         </Navbar>
-
+        <Nav fill variant="pills" defaultActiveKey="/home" className="selection-nav">
+              <Nav.Item className="nav-button">
+                <Nav.Link 
+      
+                onClick={this.setOrgChartView}>
+                  <text className="nav-button">Org Chart</text>
+                  </Nav.Link>
+              </Nav.Item >
+              <Nav.Item className="nav-button">
+                <Nav.Link 
+                onClick={this.setTableTestView}
+                >
+                  <text
+                  className="nav-button"
+                  >Tabular View (All Partners)</text>
+                  </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="nav-button">
+                <Nav.Link 
+                
+                onClick={this.setManagerListView}
+                >
+                 <text className="nav-button"> Manager List View </text>
+                  </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="nav-button">
+                <Nav.Link
+                 
+                onClick={this.setQBRView}>
+                 <text className="nav-button"> QBR View </text>
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
         <InfoDisplay employees = {this.state.employees} selectedEmployee={this.state.selectedEmployee} orgChartSource={this.state.orgChartSource} view={this.state.view} setManagerListView={this.setManagerListView}/>
         
          {view}

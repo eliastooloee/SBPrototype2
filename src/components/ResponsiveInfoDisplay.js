@@ -43,8 +43,8 @@ export default class InfoDisplay extends React.Component{
                     </Row>
                     <Row className = "kpi-display">
                         <Col>
-                            <Card className = "info-card" bg='success'> 
-                                <Card.Header>Number of Reports</Card.Header> 
+                            <Card className = "info-card" > 
+                                <Card.Header className = "info-card">Number of Reports</Card.Header> 
                                 <Card.Body>
                                     {/* {this.props.selectedEmployee.reports.length} */}
                                     <p> {this.props.orgChartSource.children.length} </p>
@@ -52,16 +52,16 @@ export default class InfoDisplay extends React.Component{
                             </Card>
                         </Col>
                         <Col>
-                            <Card className = "info-card" bg='success'> 
-                                <Card.Header>No.Employees/No.Managers</Card.Header>
+                            <Card className = "info-card" > 
+                                <Card.Header className = "info-card">No.Employees/No.Managers</Card.Header>
                                 <Card.Body>
                                 <p> 1/{this.props.orgChartSource.children.length} </p>
                                 </Card.Body>
                             </Card>
                         </Col>
                         <Col>
-                            <Card className = "info-card" bg='success'> 
-                                <Card.Header>Avg. Span of Control</Card.Header>
+                            <Card className = "info-card" > 
+                                <Card.Header className = "info-card">Avg. Span of Control</Card.Header>
                                 <Card.Body>
                                     3
                                 </Card.Body>
@@ -85,8 +85,8 @@ export default class InfoDisplay extends React.Component{
                             </Card>
                         </Col> */}
                         <Col>
-                            <Card className = "info-card" bg='success'> 
-                                <Card.Header>Total Anomalies</Card.Header>
+                            <Card className = "info-card" > 
+                                <Card.Header className = "info-card">Total Anomalies</Card.Header>
                                 <Card.Body>
                                     0
                                 </Card.Body>

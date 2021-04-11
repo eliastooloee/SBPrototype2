@@ -19,9 +19,9 @@ const OEView = (props) => {
 
       return (
        <Container fluid>
-       <h2>
+       <h3>
          Managers
-       </h2>
+       </h3>
        <div>
             
             <div className="item">
